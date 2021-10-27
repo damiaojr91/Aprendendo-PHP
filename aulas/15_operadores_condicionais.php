@@ -4,7 +4,7 @@
     $segundoNumero = 15;
     $terceiroNumero = 10;
 
-    //Exemplo 01 de IF
+    //Exemplo de else
     if ($primeiroNumero == $segundoNumero){
         echo 'O N1 é igual ao N2';
         echo '<br>';
