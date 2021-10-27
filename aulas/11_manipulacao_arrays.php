@@ -42,7 +42,7 @@
     echo 'Convertendo strings em letras maiúsculas com STRTOUPPER';
     echo '<br>';
 
-    $nomes = ['Damião', 'Silva', 'Junior',];
+    $nomes = ['Damiao', 'Silva', 'Junior',];
 
     //Transforma os itens das posições 0,1 e 2 em maiusculos
     $nomes [0] = strtoupper($nomes[0]);

@@ -30,5 +30,7 @@
 
     $result = sum(1,2); //armazenar o resultado da function com array é a melhor forma para imprimir o resultado desses casos
     var_dump($result['soma']);
-    echo sum(2,2);
-    echo sum(2,2)['soma'];
+    // echo sum(2,2);
+    // echo sum(2,2)['soma'];
+
+    sum(1,5);
