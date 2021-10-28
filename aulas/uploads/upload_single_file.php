@@ -4,9 +4,11 @@
 
     //Aqui recebemos o arquivo "imagem" vindo do formulário
     $foto = $_FILES['imagem'];
+    // echo '<pre>';
+    // var_dump($foto);
 
     //Aqui estamos definindo o caminho onde a imagem será salva
-    $path = 'uploads/imgs/';
+    $path = 'imgs/';
 
     //Aqui estamos movendo o arquivo que inicialmente ficará numa pasta temporária do PHP
     // para a pasta que definimos na varíavel $path.
