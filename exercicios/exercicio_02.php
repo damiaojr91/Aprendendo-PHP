@@ -13,7 +13,7 @@
         ENTRADA 5: ['DJR', 'achei', 'evandro', 'pedro', 'achei', 'jonas', 'tereza'] 
         ========================================================== */
 
-        echo 'Buscador de "ACHEI" <br><hr>';
+        echo 'Buscador de "ACHEI" <br><hr>' . PHP_EOL;
         
         //===================VARIAVEIS=================================//
         $lista_nomes = [
@@ -23,25 +23,48 @@
             ['raul', 'maria', 'evandro', 'pedro', 'DJR', 'jonas', 'achei'],
             ['DJR', 'achei', 'evandro', 'pedro', 'achei', 'jonas', 'tereza'],
         ];
-        
-        // echo '<pre>';
-        // var_dump($lista_nomes);
 
         $nomes = ['DJR', 'maria', 'evandro', 'pedro', 'achei', 'jonas', 'tereza'];
 
-        $conta_nomes = 0;
-        // $conta_nomes = count($lista_nomes);
-        $i = 0;
+        // $conta_nomes = 0;
 
-        foreach ($nomes as $nome){
-            $conta_nomes = $nome++;
+        // foreach ($nomes as $nome){
+        //     $conta_nomes = $nome++;
+        // }
+
+        function encontra($palavra,$lista){
+
+            $i = 0;
+            $achei = false;
+            $quantidade = count($lista);
+
+            while ($i < $quantidade && $achei == false){
+                if ($lista[$i] == $palavra){
+                    $achei = true;
+                } else {
+                    $i++;
+                }
+            }
+
+            if($achei == true){
+                // echo "A palavra foi encontrada! Sua posição no array é: {$i}" . PHP_EOL;
+                return $i;
+            } else {
+                // echo "Nada encontrado." . PHP_EOL;
+                return -1;
+            }
         }
 
-        while ($i < $conta_nomes){
-            $i++;
+        $resultado = encontra('achei',$lista_nomes[1]);
+
+        if($resultado == -1){
+           echo "Nada encontrado." . PHP_EOL;
+        } else {
+            echo "Resultado encontrado na posição {$resultado}" . PHP_EOL;
         }
 
-        var_dump($i);
+        //FAZER MATRIZ TRANSPOSTA
+        //EM CASO DE MATRIZES DEVEMOS UTILIZAR DOIS LOOPS
 
         //======================TENTATIVA 1==============================//
         // for ($i = 0; $i < $conta_nomes; $i++){
@@ -91,4 +114,4 @@
         //=======================TENTATIVA 6=============================//
 
 
-        echo '<hr>';
+
