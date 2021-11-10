@@ -14,7 +14,7 @@ Repositório criado com o intuito de praticar desenvolvimento em PHP.
 **4. Revisão:** Solução feita anteriormente, porém está em processo de melhoria.
 <br>
 
-**Exercício**     | **Descrição**     | **Status**     
+**Status**     | **Descrição**     | **Solução**     
 --------------|---------------|--------------
 [Ex. 0001](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_01.php) | Praticando arrays e contagem sem utilização da function count. | Concluído
 [Ex. 0002](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_02.php) | Encontrar a string "achei" dentro de um array e retornar qual a posição do array que se encontra. | Concluído
@@ -26,6 +26,6 @@ Repositório criado com o intuito de praticar desenvolvimento em PHP.
 [Ex. 0008](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_08.php) | Criar um bubble sort dinamico. | Concluído
 [Ex. 0009](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_09.php) | Criar uma matriz transposta. | Concluído
 [Ex. 0010](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_10.php) | Receber uma matriz quadrada. Checar se a matriz é realmente uma matriz quadrada. Colocar zeros na diagonal primária. Colocar -1 na diagonal secundária. | Concluído
-[Ex. 0011]() | Fazer contagem de um vetor sem utilizar a função "Count". | Concluído
-[Ex. 0012]() | Criar um programa que lê 6 valores inteiros e, em seguida, exibir esses valores. | Concluído
-[Ex. 0013]() | Exercício  [1534 - Matriz 123](https://www.beecrowd.com.br/judge/pt/problems/view/1534) do site Beecrowd. | Andamento
+[Ex. 0011](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_11.php) | Fazer contagem de um vetor sem utilizar a função "Count". | Concluído
+[Ex. 0012](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_12.php) | Criar um programa que lê 6 valores inteiros e, em seguida, exibir esses valores. | Concluído
+[Ex. 0013](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_13.php) | Exercício  [1534 - Matriz 123](https://www.beecrowd.com.br/judge/pt/problems/view/1534) do site Beecrowd. | Andamento
