@@ -3,11 +3,13 @@ Repositório criado com o intuito de praticar desenvolvimento em PHP.
 
 # Lista de exercícios:
 
+***
 ### Legenda:
 **1. Em Espera:** Aguardando a conclusão de alguma outra tarefa para ser iniciado ou continuado;
 **2. Andamento:** Desenvolvimento em andamento no momento.
 **3. Concluído:** Exercício concluído e funcional.
 **4. Revisão:** Solução feita anteriormente, porém está em processo de melhoria.
+***
 
 **Exercício**     | **Descrição**     | **Status**     
 --------------|---------------|--------------
