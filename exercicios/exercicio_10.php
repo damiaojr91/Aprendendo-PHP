@@ -29,23 +29,34 @@
 
     function verificaMatriz($matriz){
 
-        // $resultado = false;
+        $resultado = true;
         $qtde_linhas = count($matriz);
+        $i = 0;
 
-        for ($linha=0; $linha < $qtde_linhas; $linha++){
-            $qtde_colunas = count($matriz[$linha]);
+        // while ($i < $qtde_linhas && $resultado != false){
+        // while ($i < $qtde_linhas && !$resultado){ //"!" é sinal de negação, e inverte a resposta
+        
+        while ($i < $qtde_linhas && $resultado){
 
-            for ($coluna=0; $coluna < $qtde_colunas; $coluna++){
-                $item_linha = $matriz[$coluna];
-
-            }
+            $qtde_colunas = count($matriz[$i]);
 
             if ($qtde_linhas == $qtde_colunas){
                 $resultado = true;
             } else {
                 $resultado = false;
+                }
+            $i++;
+        }
+
+        for ($linha=0; $linha < $qtde_linhas; $linha++){
+            $qtde_colunas = count($matriz[$linha]);
+
+            if ($qtde_linhas != $qtde_colunas){
+                $resultado = false;
             }
         }
+
+        var_dump($resultado);
         echo "Linhas: {$qtde_linhas} " . PHP_EOL;
         echo "Cada linha possui {$qtde_colunas} itens." . PHP_EOL;
         echo " " . PHP_EOL;
@@ -66,7 +77,9 @@
         for ($linha=0; $linha < $qtde_linhas; $linha++){
             $qtde_colunas = count($matriz[$linha]);
 
+            //Percorrendo colunas
             for ($coluna=0; $coluna < $qtde_colunas; $coluna++){
+                //Se a linha e a coluna se cruzarem, trocará o valor do item
                 if ($linha == $coluna){
                     $matriz[$linha][$coluna] = 0;
                 }
@@ -86,38 +99,26 @@
 
             //Percorrendo colunas
             for ($coluna=0; $coluna < $qtde_linhas; $coluna++){
-                if ($linha == $coluna){
+                if ($linha == ($qtde_colunas - $coluna -1)){
                     //A linha a seguir irá correr as colunas em ordem inversa, fazendo a substituição
                     //É necessário adicionar o -1 no valor do array para que o programa entenda que deve ignorar a ultima casa
                     //O valor [$qtde_colunas - $coluna -1] está realizando a rodada de colunas de forma inversa
-                    $matriz[$linha][$qtde_colunas - $coluna -1] = -1;
+                    $matriz[$linha][$coluna] = -1;
                 }
             }
         }
 
         return imprimeMatriz($matriz);
     }
-
-        // $resto = ($qtde_colunas % $qtde_linhas);
-        // if ((($qtde_linhas + $qtde_colunas) / 2) % 2 == 0){
-
-        // if (($n1 % 2) == 0)
-
-        //while
-        //qtde colunas deve ser = qtde linhas
-        //criar flag
-        //separar print
-
+    
     function imprimeMatriz($matriz){
 
         $qtde_linhas = count($matriz);
 
         for ($linha=0; $linha < $qtde_linhas; $linha++){
-
             $qtde_colunas = count($matriz[$linha]);
 
             for ($coluna=0; $coluna < $qtde_colunas; $coluna++){
-
                 $vetor = $matriz[$linha][$coluna];
 
                 echo "| " . $vetor . " |";
@@ -130,11 +131,11 @@
     // insereEntrada();
 
     $matriz_entrada = [
-        // [7,8,9,4,5],
+        [7,8,9],
         [4,5,6],
         [1,2,3],
-        [1,2,3],
         // [1,2,3,4],
+        // [1,2,3,4,5],
     ];
 
     echo " " . PHP_EOL;
@@ -158,3 +159,9 @@
     diagonalSecundaria($matriz_entrada);
 
 
+    // if (($n1 % 2) == 0)
+
+    //while
+    //qtde colunas deve ser = qtde linhas
+    //criar flag
+    //separar print

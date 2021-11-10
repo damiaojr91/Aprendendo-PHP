@@ -9,9 +9,6 @@
 
         for ($i=0; $i < $conta_matriz; $i++){
             for ($j=0; $j < count($matriz[$i]); $j++){
-                // $auxiliar = $matriz[$i+1][$j+1];
-                // $matriz[$i+1][$j+1] = $matriz[$j][$i];
-                // $matriz[$j][$i] = $auxiliar;
                 $transposta[$j][$i] = $matriz[$i][$j];
             }
         }
