@@ -18,38 +18,59 @@
         $n = $entrada;
 
         if($n >= 2 && $n <= 5 ){
-            imprimeMatriz($n);
+            geraMatriz($n);
         } else {
             echo "O valor não corresponde aos critérios. Por favor insira novos valores." . PHP_EOL;
             insereEntrada();
         }
     }
 
-    function imprimeMatriz($entrada){
+    function geraMatriz($entrada){
 
         //Devo receber um valor que representará quantas linhas e colunas serão criadas
         //Com esse valor como base a matriz deve ser construida e preenchida com o numero 3
         //criar as linhas e adicionar 3 de acordo com o valor recebido
 
-        $i = 0;
-        $matriz = array();
+        $matriz = array($entrada);
 
-        while($i < $entrada){
-            for($j=0; $j < $i; $j++){
-                $valor[$i][$j] = array_push($matriz, 3);
-                // echo "{$valor[$i][$j]}" . PHP_EOL;
-                echo "| " . $valor[$i][$j] . PHP_EOL;
+        // var_dump($matriz);
+
+        $qtde_linhas = count($entrada);
+
+        for ($i=0; $i < $qtde_linhas; $i++){
+
+            $qtde_colunas = count($matriz[$i]);
+
+            for ($j=0; $j < $qtde_colunas; $j++){
+
+                if ($i == $j){
+                    $matriz[$i][$j] = 1;
+                } else if ($i == ($qtde_colunas - $j -1)) {
+                    $matriz[$i][$j] = 2;
+                } else {
+                    $matriz[$i][$j] = 3;
+                }
             }
-            $i++;
-            // echo "{$valor[$i][$j]}" . PHP_EOL;
         }
+    
+        return imprimeMatriz($matriz);
+    }
 
-        // $qtde_itens = count($matriz);
+    function imprimeMatriz($matriz){
 
-        // for ($i=0; $i < $qtde_itens; $i++){
+        $qtde_linhas = count($matriz);
 
-        //         echo "| " . $matriz[$i][$j];
-        // }
+        for ($linha=0; $linha < $qtde_linhas; $linha++){
+            $qtde_colunas = count($matriz[$linha]);
+
+            for ($coluna=0; $coluna < $qtde_colunas; $coluna++){
+                $vetor = $matriz[$linha][$coluna];
+
+                echo "| " . $vetor . " |";
+            }
+
+            echo '' . PHP_EOL;
+        }
     }
 
     $entrada = insereEntrada();
