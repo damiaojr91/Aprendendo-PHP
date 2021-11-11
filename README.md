@@ -14,8 +14,8 @@ Repositório criado com o intuito de praticar desenvolvimento em PHP.
 **4. Em revisão:** Solução feita anteriormente, porém está em processo de melhoria.
 <br>
 
-**Exercício**     | **Descrição**     | **Situação/Resolução**     
---------------|--------------|---------------|--------------
+**Exercício**  | **Descrição**   | **Situação/Resolução**     
+---------------|-----------------|-------------------------
 Ex. 0001 | Praticando arrays e contagem sem utilização da function count. | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_01.php)
 Ex. 0002 | Encontrar a string "achei" dentro de um array e retornar qual a posição do array que se encontra. | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_02.php)
 Ex. 0003 | Calcular a média de 10 números. | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_03.php)
