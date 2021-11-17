@@ -44,7 +44,7 @@
                 $resultado = true;
             } else {
                 $resultado = false;
-                }
+            }
             $i++;
         }
 

@@ -6,7 +6,7 @@
     // Saída:
     // Para cada N lido, apresente a saída conforme o exemplo fornecido no exercicio 1534 do Beecrowd.
 
-    function insereEntrada(){
+    function inseressEntrada(){
         echo "Insira um numero entre 2 e 5: ";
         $entrada = fgets(STDIN);
         echo "{$entrada}";
@@ -14,14 +14,26 @@
         return $entrada;
     }
 
-    function verificaEntrada($entrada){
-        $n = $entrada;
+    function insereEntrada(){
 
-        if($n >= 2 && $n <= 5 ){
-            geraMatriz($n);
-        } else {
-            echo "O valor não corresponde aos critérios. Por favor insira novos valores." . PHP_EOL;
-            insereEntrada();
+        echo "Insira um numero entre 2 e 5: ";
+        $entrada = fgets(STDIN);
+        $retorno = false;
+
+        while ($retorno == false){
+
+            if($entrada >= 2 && $entrada <= 5){
+
+                $retorno == true;
+                return $entrada;
+            } else {
+                echo "O valor inserido não corresponde aos critérios." . PHP_EOL;
+                echo "Por favor insira algum valor entre 2 e 5." . PHP_EOL;
+                $retorno = false;
+                $entrada = fgets(STDIN);
+            }
+
+            // return $entrada;
         }
     }
 
@@ -31,29 +43,23 @@
         //Com esse valor como base a matriz deve ser construida e preenchida com o numero 3
         //criar as linhas e adicionar 3 de acordo com o valor recebido
 
-        $matriz = array($entrada);
+        $matriz = [];
+        // $n = intval($entrada); //converte o valor de string para int
+        $n = (int)$entrada; //converte o valor de string para int
 
-        // var_dump($matriz);
-
-        $qtde_linhas = count($entrada);
-
-        for ($i=0; $i < $qtde_linhas; $i++){
-
-            $qtde_colunas = count($matriz[$i]);
-
-            for ($j=0; $j < $qtde_colunas; $j++){
-
-                if ($i == $j){
-                    $matriz[$i][$j] = 1;
-                } else if ($i == ($qtde_colunas - $j -1)) {
+        for ($i=0; $i < $n; $i++){ //linha
+            for ($j=0; $j < $n; $j++){ //coluna
+                if ($i == (($n -$j) -1)){ //insere valor
                     $matriz[$i][$j] = 2;
+                } else if ($i == $j) {
+                    $matriz[$i][$j] = 1; //insere valor
                 } else {
-                    $matriz[$i][$j] = 3;
+                    $matriz[$i][$j] = 3; //insere valor
                 }
             }
         }
-    
-        return imprimeMatriz($matriz);
+
+        return $matriz;
     }
 
     function imprimeMatriz($matriz){
@@ -74,4 +80,6 @@
     }
 
     $entrada = insereEntrada();
-    verificaEntrada($entrada);
+    // verificaEntrada($entrada);
+    $retorno = geraMatriz($entrada);
+    imprimeMatriz($retorno);

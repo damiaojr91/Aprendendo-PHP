@@ -28,4 +28,5 @@ Ex. 0009 | Criar uma matriz transposta. | [Concluído](https://github.com/damiao
 Ex. 0010 | Receber uma matriz quadrada. Checar se a matriz é realmente uma matriz quadrada. Colocar zeros na diagonal primária. Colocar -1 na diagonal secundária. | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_10.php)
 Ex. 0011 | Fazer contagem de um vetor sem utilizar a função "Count". | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_11.php)
 Ex. 0012 | Criar um programa que lê 6 valores inteiros e, em seguida, exibir esses valores. | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_12.php)
-Ex. 0013 | Exercício  [1534 - Matriz 123](https://www.beecrowd.com.br/judge/pt/problems/view/1534) do site **Beecrowd**. | [Em andamento](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_13.php)
+Ex. 0013 | Exercício  [1534 - Matriz 123](https://www.beecrowd.com.br/judge/pt/problems/view/1534) do site **Beecrowd**. | [Concluído](https://github.com/damiaojr91/Aprendendo-PHP/blob/main/exercicios/exercicio_13.php)
+<!-- Ex. 0014 | Criar um jogo da velha. | [Em andamento]() -->
